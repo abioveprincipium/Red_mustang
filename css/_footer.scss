@@ -1,0 +1,52 @@
+footer{
+    display: flex;
+    flex-direction: row;
+    margin:5%;
+    .features{
+        display: flex;
+        padding: 10px;
+        flex-direction:column;
+        width: 33.3%;
+        height: auto;
+        padding:10px;
+        justify-content: space-between;
+        align-items: center;
+        p{
+            font-family: Roboto Slab;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+            opacity: 0.5;
+        }
+        b{
+            font-family: Roboto Slab;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        img{
+            max-width: 70%;
+        }
+        .icons{
+            display: flex;
+            flex-direction: row;
+            img{
+                margin-left:4px;
+                margin-right:4px;
+            }
+        }
+        .cer{
+            img{
+                max-width: 30%;
+            }
+        }
+    }
+    .features:first-child{
+        align-items: flex-start;
+    }
+    .features:last-child{
+        align-items: flex-end;
+    }
+}

@@ -1,0 +1,75 @@
+.nature{
+    background-image: url("../img/forest-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5%;
+    p, h3{
+        margin:0;
+        padding: 0;
+    }
+    p:first-child{
+        font-family: Roboto Condensed;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+    }
+    p:last-child{
+        font-family: Roboto Slab;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+    }
+    h3{
+        font-family: DM Serif Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 68px;
+        text-align: center;
+
+    }
+    #nature{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        img{
+            max-width: 10%;
+            height: auto;
+        }
+    }
+    #underbar{
+        margin-top: -50px;
+        max-width: 40%;
+        height: auto;
+    }
+    h2{
+        font-family: DM Serif Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 110px;
+        line-height: 68px;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .nature{
+        h3{
+            font-size: 16px;
+        }
+        h2{
+            font-size: 35px;
+        }
+    }
+}

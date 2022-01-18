@@ -1,0 +1,66 @@
+.chefs{
+    background-image: url("../img/draw-ribs.png"),url("../img/white-apron.png"), url("../img/butcher-big.png");
+    background-position: left top, center bottom,  right bottom ;
+    background-repeat: no-repeat;
+    background-size: 30%, 40%, 27%;
+    position: relative;
+    .imiona{
+        position: relative;
+        height: 80vh;
+        padding: 20px;
+        text-align: center;
+         p{
+             float: right;
+            padding: 1%;
+            font-family: Roboto Condensed;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        span{
+            font-family: Reenie Beanie;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 72px;
+        }
+    }
+    }
+    #union4{
+        position: absolute;
+        max-width: 50px;
+        height: auto;
+        right: 25%;
+        top:10%
+    }
+
+    #szef_w_czarnym_fartuchu{
+        position: absolute;
+        left: 0;
+        bottom:0;
+        max-width:30%;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .imiona{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        #union4{
+            max-width: 5%;
+            height: auto;
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+    .imiona{
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}

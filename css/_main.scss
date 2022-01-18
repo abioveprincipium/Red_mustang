@@ -1,0 +1,89 @@
+.main{
+    //height: 100vh;
+    background-image: url("../img/back_ribs.png"),url("../svg/pepper.svg"), url("../img/logo-w-tle.png"),url("../img/kielbasy.png"), url("../img/spare_ribs.png");
+    background-position: left center,center center, center top,top right, right bottom;
+    background-repeat: no-repeat;
+    background-size: 15%, 7%, 30%, 35%,20%;
+}
+.cechy{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh;
+    .box{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image: url(../img/sash.png), url(../img/free.png);
+        background-position: left top,center center;
+        background-repeat: no-repeat;
+        position: relative;
+        border-radius: 25px 0px;
+        margin: .5%;
+        width: 203px;
+        height: 203px;
+        background-color: rgba(196, 196, 196, 0.1);
+        p{
+            align-content: flex-end;
+            font-family: Roboto Condensed;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 19px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            padding-left:5px ;
+            padding-right:5px ;
+        }
+        &:before{
+            display: table;
+        }
+    }
+}
+
+@media only screen and (min-width: 769px){
+    .cechy{
+        flex-wrap: nowrap;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .cechy{
+        flex-wrap: wrap;
+    }
+}
+#sklep{
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top:30%;
+    width: 45px;
+    height: auto;
+}
+.tekst{
+    width: 40%;
+    margin-left: 20vw;
+    margin-bottom: 20vh;
+    padding-top:20vh;
+    h1{
+        font-family: DM Serif Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 68px;
+        line-height: 68px;
+    }
+    p{
+        font-family: Roboto Slab;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .tekst{
+        margin: 5vw;
+    }
+}

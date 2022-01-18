@@ -1,0 +1,15 @@
+@import './menu';
+@import './main';
+@import './hero';
+@import './carousel';
+@import './sekcja_nat';
+@import './chefs';
+@import './footer';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+body {
+    background-color: black;
+    margin: 0;
+    color: rgb(255, 255, 255);
+}

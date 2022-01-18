@@ -1,0 +1,627 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+.logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-right: 20vw;
+}
+.logo #first-logo {
+  max-width: 60px;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+.logo #second-logo {
+  max-width: 120px;
+}
+
+#menu-burger {
+  visibility: hidden;
+}
+
+.nav {
+  background: rgba(44, 44, 44, 0.5);
+  mix-blend-mode: normal;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav label {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  border-radius: 5px;
+  background: beige;
+  transition: 0.4s;
+  cursor: pointer;
+  right: 15px;
+  top: 25px;
+  background: transparent;
+}
+.nav label::before {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  border-radius: 5px;
+  background: beige;
+  transition: 0.4s;
+  content: "";
+  transform: translateY(-5px);
+}
+.nav label::after {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  border-radius: 5px;
+  background: beige;
+  transition: 0.4s;
+  content: "";
+  transform: translateY(5px);
+}
+
+.menu1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.language {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav #menu-burger:checked + label {
+  width: 0px;
+}
+.nav #menu-burger:checked + label::before {
+  right: 0px;
+  transform: rotate(45deg) translate(0px);
+  -webkit-transform: rotate(45deg) translate(0px);
+}
+.nav #menu-burger:checked + label::after {
+  right: 0px;
+  transform: rotate(-45deg) translate(0px);
+  -webkit-transform: rotate(-45deg) translate(0px);
+}
+
+.menu {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.menu a {
+  text-decoration: none;
+  color: #FFFFFF;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+.menu a:hover {
+  color: #FF0000;
+}
+.menu .active {
+  font-weight: bold;
+  color: #FF0000;
+}
+
+@media only screen and (min-width: 769px) {
+  .nav label {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .menu1 {
+    position: fixed;
+    display: none;
+  }
+
+  .nav {
+    padding: 0;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .logo #first-logo {
+    max-width: 20px;
+    margin: auto;
+  }
+}
+#menu-burger:checked ~ .menu1 {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  border: 2px solid black;
+  background: rgba(0, 0, 0, 0.945);
+  padding: 10px 0 10px 0;
+}
+#menu-burger:checked ~ .menu1 .menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  background-image: url("../img/back_ribs.png"), url("../svg/pepper.svg"), url("../img/logo-w-tle.png"), url("../img/kielbasy.png"), url("../img/spare_ribs.png");
+  background-position: left center, center center, center top, top right, right bottom;
+  background-repeat: no-repeat;
+  background-size: 15%, 7%, 30%, 35%, 20%;
+}
+
+.cechy {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+.cechy .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-image: url(../img/sash.png), url(../img/free.png);
+  background-position: left top, center center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 25px 0px;
+  margin: 0.5%;
+  width: 203px;
+  height: 203px;
+  background-color: rgba(196, 196, 196, 0.1);
+}
+.cechy .box p {
+  align-content: flex-end;
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.cechy .box:before {
+  display: table;
+}
+
+@media only screen and (min-width: 769px) {
+  .cechy {
+    flex-wrap: nowrap;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cechy {
+    flex-wrap: wrap;
+  }
+}
+#sklep {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 30%;
+  width: 45px;
+  height: auto;
+}
+
+.tekst {
+  width: 40%;
+  margin-left: 20vw;
+  margin-bottom: 20vh;
+  padding-top: 20vh;
+}
+.tekst h1 {
+  font-family: DM Serif Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 68px;
+  line-height: 68px;
+}
+.tekst p {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@media only screen and (max-width: 768px) {
+  .tekst {
+    margin: 5vw;
+  }
+}
+.hero {
+  background-image: url("../img/wooden-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.tradiction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.tradiction img {
+  max-width: 40%;
+  max-height: 40%;
+}
+
+.union {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20vh;
+  padding-bottom: 10vh;
+  align-items: baseline;
+}
+.union p {
+  font-family: DM Serif Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 62px;
+  text-align: center;
+}
+
+.akapity {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 7%;
+  height: 50vh;
+}
+.akapity h3 {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+.akapity h2 {
+  font-family: DM Serif Text;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 62px;
+}
+.akapity p {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+.akapity h4 {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.25em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.akapity a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 769px) {
+  .tradiction {
+    flex-wrap: nowrap;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .tradiction {
+    flex-wrap: wrap;
+  }
+
+  .akapity h3 {
+    font-size: 16px;
+  }
+  .akapity h2 {
+    font-size: 35px;
+  }
+  .akapity h4 {
+    font-size: 10px;
+  }
+
+  .union p {
+    font-size: 22px;
+  }
+  .union img {
+    max-width: 10%;
+  }
+}
+@media only screen and (max-width: 965px) {
+  .akapity {
+    padding: 2%;
+  }
+}
+.carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+}
+.carousel .specjały, .carousel .specjały-2 {
+  background: url(../img/left-right-wurst.jpg);
+  width: 33.3%;
+  height: 50vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.carousel .specjały-1 {
+  background: url(../img/left-wurst.jpg);
+  width: 33.3%;
+  height: 50vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.carousel .label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.836);
+  width: 100%;
+  height: 33%;
+  padding: 2%;
+}
+.carousel .label h2 {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+  font-family: DM Serif Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+}
+.carousel .label a {
+  text-decoration: none;
+  color: white;
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.carousel .label a img {
+  max-width: 25px;
+}
+.carousel #button {
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  top: 45%;
+  width: 45px;
+  height: auto;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel .label h2 {
+    font-size: 18px;
+  }
+}
+.nature {
+  background-image: url("../img/forest-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+.nature p, .nature h3 {
+  margin: 0;
+  padding: 0;
+}
+.nature p:first-child {
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.nature p:last-child {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+.nature h3 {
+  font-family: DM Serif Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 68px;
+  text-align: center;
+}
+.nature #nature {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.nature #nature img {
+  max-width: 10%;
+  height: auto;
+}
+.nature #underbar {
+  margin-top: -50px;
+  max-width: 40%;
+  height: auto;
+}
+.nature h2 {
+  font-family: DM Serif Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 110px;
+  line-height: 68px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .nature h3 {
+    font-size: 16px;
+  }
+  .nature h2 {
+    font-size: 35px;
+  }
+}
+.chefs {
+  background-image: url("../img/draw-ribs.png"), url("../img/white-apron.png"), url("../img/butcher-big.png");
+  background-position: left top, center bottom, right bottom;
+  background-repeat: no-repeat;
+  background-size: 30%, 40%, 27%;
+  position: relative;
+}
+.chefs .imiona {
+  position: relative;
+  height: 80vh;
+  padding: 20px;
+  text-align: center;
+}
+.chefs .imiona p {
+  float: right;
+  padding: 1%;
+  font-family: Roboto Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+.chefs .imiona p span {
+  font-family: Reenie Beanie;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 72px;
+}
+.chefs #union4 {
+  position: absolute;
+  max-width: 50px;
+  height: auto;
+  right: 25%;
+  top: 10%;
+}
+.chefs #szef_w_czarnym_fartuchu {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 30%;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .imiona {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .imiona #union4 {
+    max-width: 5%;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .imiona {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+}
+footer .features {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  width: 33.3%;
+  height: auto;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .features p {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  opacity: 0.5;
+}
+footer .features b {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+}
+footer .features img {
+  max-width: 70%;
+}
+footer .features .icons {
+  display: flex;
+  flex-direction: row;
+}
+footer .features .icons img {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+footer .features .cer img {
+  max-width: 30%;
+}
+footer .features:first-child {
+  align-items: flex-start;
+}
+footer .features:last-child {
+  align-items: flex-end;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
